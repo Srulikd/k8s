@@ -5,7 +5,7 @@ metadata:
 spec:
   containers: 
   - name: animals 
-    image: animals:hare
+    image: supergiantkir/animals:hare
     ports: 
     - containerPort: 80
     volumeMounts:
