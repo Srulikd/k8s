@@ -18,8 +18,8 @@ spec:
    volumeMounts:
     - mountPath: /files
       name: animal-storage
-volumes:
-  - name: animal-storage
-    hostPath:
-      path: /tmp
-      type: Directory
+ volumes:
+ - name: animal-storage
+   hostPath:
+     path: /tmp
+     type: Directory
