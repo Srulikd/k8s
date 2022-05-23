@@ -17,7 +17,7 @@ spec:
    - containerPort: 80
    volumeMounts:
    - mountPath: /files
-     name: animal-volumee
+     name: animal-volume
   volumes:
   - name: animal-volume
     hostPath:
