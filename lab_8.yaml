@@ -3,23 +3,23 @@ kind: Pod  # Object Type
 metadata: 
  name: animals 
 spec:
- containers: 
- - name: animals 
-   image: animals:hare
-   ports: 
-   - containerPort: 80
-   volumeMounts:
-   - mountPath: /files
-     name: animal-volume
- - name: spring-music 
-   image: yanivomc/spring-music:latest
-   ports: 
-   - containerPort: 80
-   volumeMounts:
-   - mountPath: /files
-     name: animal-volume
- volumes:
- - name: animal-volume
-   hostPath:
-     path: /temp
-     type: DirectoryOrCreate
+  containers: 
+  - name: animals 
+    image: animals:hare
+    ports: 
+    - containerPort: 80
+    volumeMounts:
+    - mountPath: /files
+      name: animal-volume
+  - name: spring-music 
+    image: yanivomc/spring-music:latest
+    ports: 
+    - containerPort: 80
+    volumeMounts:
+    - mountPath: /files
+      name: animal-volume
+  volumes:
+  - name: animal-volume
+    hostPath:
+      path: /temp
+      type: DirectoryOrCreate
