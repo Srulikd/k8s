@@ -18,8 +18,8 @@ spec:
    volumeMounts:
    - mountPath: /files
      name: animal-volume
-  volumes:
-  - name: animal-volume
-    hostPath:
-      path: /temp
-      type: DirectoryOrCreate
+ volumes:
+ - name: animal-volume
+   hostPath:
+     path: /temp
+     type: DirectoryOrCreate
