@@ -18,7 +18,7 @@ spec:
     volumeMounts:
     - mountPath: /files
       name: animal-volume
-  selector:
+  nodeSelector:
     matchLabels:
       type: db
       env: dev
