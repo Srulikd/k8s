@@ -9,17 +9,17 @@ spec:
    ports: 
    - containerPort: 80
    volumeMounts:
-    - mountPath: /files
-      name: animal-storage
+   - mountPath: /files
+     name: animal-volume
  - name: spring-music 
    image: yanivomc/spring-music:latest
    ports: 
    - containerPort: 80
    volumeMounts:
-    - mountPath: /files
-      name: animal-storage
- volumes:
- - name: animal-storage
-   hostPath:
-     path: /tmp
-     type: Directory
+   - mountPath: /files
+      name: animal-volumee
+  volumes:
+  - name: animal-volume
+    hostPath:
+      path: /temp
+      type: Directory
