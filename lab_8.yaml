@@ -22,4 +22,4 @@ spec:
   - name: animal-volume
     hostPath:
       path: /temp
-      type: Directory
+      type: DirectoryOrCreate
