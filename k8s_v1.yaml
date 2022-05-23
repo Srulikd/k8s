@@ -13,7 +13,7 @@ metadata:
   uid: 678c1f52-0bc3-45ab-9a51-aba4a2ce231b
 spec:
   progressDeadlineSeconds: 600
-  replicas: 5
+  replicas: 3
   revisionHistoryLimit: 10
   selector:
     matchLabels:
@@ -41,22 +41,3 @@ spec:
       schedulerName: default-scheduler
       securityContext: {}
       terminationGracePeriodSeconds: 30
-status:
-  availableReplicas: 5
-  conditions:
-  - lastTransitionTime: "2022-05-23T09:08:06Z"
-    lastUpdateTime: "2022-05-23T09:08:06Z"
-    message: Deployment has minimum availability.
-    reason: MinimumReplicasAvailable
-    status: "True"
-    type: Available
-  - lastTransitionTime: "2022-05-23T09:07:58Z"
-    lastUpdateTime: "2022-05-23T09:25:25Z"
-    message: ReplicaSet "animals-7d89bf99f7" has successfully progressed.
-    reason: NewReplicaSetAvailable
-    status: "True"
-    type: Progressing
-  observedGeneration: 2
-  readyReplicas: 5
-  replicas: 5
-  updatedReplicas: 5
