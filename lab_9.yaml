@@ -19,8 +19,8 @@ spec:
     - mountPath: /files
       name: animal-volume
   nodeSelector:
-    type: db
-    env: dev
+   type: db
+   env: dev
   volumes:
   - name: animal-volume
     hostPath:
