@@ -1,0 +1,28 @@
+apiVersion: v1 # K8S API Version
+kind: Pod  # Object Type
+metadata: 
+ name: animals 
+spec:
+  containers: 
+  - name: animals 
+    image: supergiantkir/animals:hare
+    ports: 
+    - containerPort: 80
+    volumeMounts:
+    - mountPath: /files
+      name: animal-volume
+  - name: spring-music 
+    image: yanivomc/spring-music:latest
+    ports: 
+    - containerPort: 80
+    volumeMounts:
+    - mountPath: /files
+      name: animal-volume
+  nodeSelector:
+    type: db
+    env: dev
+  volumes:
+  - name: animal-volume
+    hostPath:
+      path: /temp
+      type: DirectoryOrCreate
