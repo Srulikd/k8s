@@ -1,7 +1,9 @@
 apiVersion: v1 # K8S API Version
 kind: Pod  # Object Type
 metadata: 
- name: web 
+ name: web
+ labels:
+   type: web
 spec:
   affinity:
     podAffinity:
@@ -18,5 +20,3 @@ spec:
     image: supergiantkir/animals:moose
     ports: 
     - containerPort: 80
-    label:
-      type: web
