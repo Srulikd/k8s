@@ -25,9 +25,9 @@ spec:
                 number: 80
 ---
 apiVersion: networking.k8s.io/v1
-kind: bear-Ingress
+kind: Ingress
 metadata:
-  name: ingress-with-auth
+  name: bear-ingress
   annotations:
     # type of authentication
     nginx.ingress.kubernetes.io/auth-type: basic
