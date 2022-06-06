@@ -1,9 +1,9 @@
-
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-v1
 spec:
+  ingressClassName: nginx
   rules:
     http:
       paths:
@@ -23,6 +23,7 @@ metadata:
     nginx.ingress.kubernetes.io/canary: "true"
     nginx.ingress.kubernetes.io/canary-weight: "10"
 spec:
+  ingressClassName: nginx
   rules:
     http:
       paths:
